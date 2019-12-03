@@ -21,7 +21,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 # function for index ....................................................................
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
     return "Hello, World!"
 
