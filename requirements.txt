@@ -9,3 +9,5 @@ opencv-contrib-python
 Pillow
 pytesseract
 werkzeug
+requests
+
