@@ -12,7 +12,7 @@ UPLOAD_FOLDER = './'
 
 # flask app requirements .......................................
 
-app = Flask(image)
+app = Flask(_name_)
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024 * 1024
