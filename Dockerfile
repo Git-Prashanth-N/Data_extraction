@@ -16,9 +16,6 @@ RUN pip install pillow
 RUN pip install pytesseract
 RUN pip install opencv-contrib-python
 
-COPY . /APP
-WORKDIR /APP
-
 EXPOSE 5000
 RUN pip install -r requirements.txt
 CMD ["python", "main.py"]
