@@ -15,7 +15,7 @@ def make_post_req_base64(filename):
         encoded_string = base64.b64encode(image_file.read())
 
     # defining the api-endpoint..................................................
-    API_ENDPOINT = "http://127.0.0.1:5000/file-upload"
+    API_ENDPOINT = "https://secret-headland-45746.herokuapp.com"
 
     # print(filename, width, height)
 
