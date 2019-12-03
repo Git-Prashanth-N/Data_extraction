@@ -12,6 +12,8 @@ RUN apt-get -y install tesseract-ocr
 COPY . /app
 WORKDIR /app
 
+ADD package.json /app/package.json
+
 RUN pip install pillow
 RUN pip install pytesseract
 RUN pip install opencv-contrib-python
