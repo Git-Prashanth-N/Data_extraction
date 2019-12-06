@@ -19,8 +19,17 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+   
+   
+UPLOAD_FOLDER = './'
+
+# flask app requirements .......................................
+
+app = Flask(_name_)
+app.secret_key = "secret key"
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024 * 1024 
 # function for index ....................................................................
-app = Flask(__name__)
 @app.route('/')
 def index():
     return "Hello, World!"
