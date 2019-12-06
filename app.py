@@ -3,7 +3,7 @@
    Python Version: 3.7 '''
 
 # importing Flask from flask....................................
-
+from app import app
 from flask import Flask
 
 # Upload images to the folder...................................
