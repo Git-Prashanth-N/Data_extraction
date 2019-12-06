@@ -11,6 +11,7 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 from io import BytesIO
 from app import app
+from flask import Flask
 
 # allowed extension files type............................................................
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
