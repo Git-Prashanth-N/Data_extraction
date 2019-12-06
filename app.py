@@ -3,7 +3,6 @@
    Python Version: 3.7 '''
 
 # importing Flask from flask....................................
-from app import app
 from flask import Flask
 
 # Upload images to the folder...................................
@@ -12,7 +11,7 @@ UPLOAD_FOLDER = './'
 
 # flask app requirements .......................................
 
-app = Flask(app)
+app = Flask(_name)
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024 * 1024
