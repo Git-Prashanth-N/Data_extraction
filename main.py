@@ -10,7 +10,6 @@ from flask import request, jsonify
 from werkzeug.utils import secure_filename
 from PIL import Image
 from io import BytesIO
-from app import app
 from flask import Flask
 
 # allowed extension files type............................................................
