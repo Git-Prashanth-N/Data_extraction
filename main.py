@@ -15,6 +15,10 @@ from app import app
 # allowed extension files type............................................................
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
+app = Flask(_name_)
+app.secret_key = "secret key"
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024 * 1024
 
 # function for allowed files..............................................................
 def allowed_file(filename):
