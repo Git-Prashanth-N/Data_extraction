@@ -1,20 +1,8 @@
-Click
-Flask==1.0.2
-Flask-Celery==2.4.3
-Flask-Login==0.4.1
-flask-oidc==1.4.0
-Flask-Script==2.0.6
-Flask-Session==0.3.1
-Flask-Sessionstore==0.4.5
+Click==7.0
+Flask==1.1.1
 gunicorn==19.9.0
-itsdangerous
-Jinja2
-MarkupSafe
-numpy
-opencv-contrib-python
-Pillow
-pytesseract
-werkzeug
-requests
-routes
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+Werkzeug==0.15.6
 
