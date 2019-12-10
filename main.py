@@ -11,6 +11,7 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 from io import BytesIO
 from flask import Flask
+from app import app
 
 # allowed extension files type............................................................
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -20,15 +21,7 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
    
-   
-UPLOAD_FOLDER = './'
-
-# flask app requirements .......................................
-
-app = Flask(_name_)
-app.secret_key = "secret key"
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 1024 * 1024 * 1024 * 1024 
+  
 # function for index ....................................................................
 @app.route('/')
 def index():
@@ -67,5 +60,5 @@ def upload_file():
 # debugger for program.....................................................................
 
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', debug='True')
+   app.run(host='0.0.0.0', port=5000, debug='True')
             
