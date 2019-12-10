@@ -1,1 +1,1 @@
-web: gunicorn --preload app.route:app
+web: gunicorn routes:app
