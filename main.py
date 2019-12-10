@@ -23,12 +23,12 @@ def allowed_file(filename):
    
   
 # function for index ....................................................................
-@application.route('/')
+@app.route('/')
 def index():
     return "Hello, World!"
 
 # function for uploading a file..........................................................
-@application.route('/file-upload', methods=['POST'])
+@app.route('/file-upload', methods=['POST'])
 def upload_file():
     filename = request.form['filename']
     file = request.form['file']
