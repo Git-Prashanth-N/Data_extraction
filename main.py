@@ -11,7 +11,7 @@ from werkzeug.utils import secure_filename
 from PIL import Image
 from io import BytesIO
 from flask import Flask
-from app import application
+from app import app
 
 # allowed extension files type............................................................
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -46,7 +46,7 @@ def upload_file():
         return resp
     if file and allowed_file(filename):
         filename = secure_filename(filename)
-        file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         date = image_date(filename)
         resp = jsonify({'date': date})
         resp.status_code = 201
@@ -60,5 +60,5 @@ def upload_file():
 # debugger for program.....................................................................
 
 if __name__ == "__main__":
-   application.run(host='0.0.0.0', port=5000, debug='True')
+   app.run(threaded=True, port=5000)
             
