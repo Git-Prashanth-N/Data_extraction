@@ -7,6 +7,8 @@ MAINTAINER Prashanth Noothi "prashanthnoothi@gmail.com"
 RUN apt-get update -y
 RUN apt-get install -y python-pip python-dev build-essential
 
+RUN apt-get install libxrender1 libfontconfig1
+
 RUN apt-get install -y libsm6 libxext6 libxrender-dev tesseract-ocr
 
 #RUN apt-get -y install tesseract-ocr
